@@ -1,0 +1,27 @@
+{
+    "name": "locationtest",
+    "main": "app.js",
+    "jsoptions": "--expose_gc",
+    "version": "1.4.0",
+    "author": "Nedyalko Nikolov <nedyalko.nikolov@telerik.com>",
+    "description": "Location example",
+    "license": "BSD",
+    "keywords": [
+        "telerik",
+        "mobile",
+        "nativescript",
+        "{N}",
+        "tns",
+        "location",
+        "geolocation",
+        "googleMaps"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nsndeck/locationtest.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nsndeck/locationtest/issues"
+    },
+    "homepage": "https://github.com/nsndeck/locationtest"
+}

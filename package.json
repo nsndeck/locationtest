@@ -1,0 +1,16 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.locationtest",
+		"tns-ios": {
+			"version": "1.5.0"
+		},
+		"tns-android": {
+			"version": "1.5.0"
+		}
+	},
+	"dependencies": {
+		"tns-core-modules": "1.5.0",
+		"tns-geolocation": "0.0.1",
+		"tns-googleMaps": "0.0.1"
+	}
+}
