@@ -1,4 +1,4 @@
-var geolocation = require("tns-geolocation");
+var geolocation = require("nativescript-geolocation");
 var fs = require("file-system");
 var frame = require("ui/frame");
 var observable_1 = require("data/observable");

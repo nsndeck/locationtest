@@ -9,8 +9,8 @@
 		}
 	},
 	"dependencies": {
-		"tns-core-modules": "1.5.0",
-		"tns-geolocation": "0.0.1",
-		"tns-googleMaps": "0.0.1"
+		"nativescript-geolocation": "0.0.5",
+		"nativescript-googlemaps": "0.0.3",
+		"tns-core-modules": "1.5.0"
 	}
 }
