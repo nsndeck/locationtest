@@ -1,15 +1,14 @@
 <Page loaded="pageLoaded">
-	<GridLayout rows="auto, auto, auto, auto, auto, *, auto">
+	<GridLayout rows="auto, auto, auto, auto, *, auto">
 		<Button row="0" text="get current location" tap="buttonGetLocationTap"/>
 		<Button row="1" text="start monitoring" tap="buttonStartTap"/>
 		<Button row="2" text="stop monitoring" tap="buttonStopTap"/>
-        <Button row="3" text="export" tap="exportData"/>
-        <Button row="4" text="Show on GMap" tap="showOnMap"/>
-        <ListView row="5" items="{{ locations }}">
+        <Button row="3" text="Show on GMap" tap="showOnMap"/>
+        <ListView row="4" items="{{ locations }}">
 			<ListView.itemTemplate>
 				<Label text="{{ $value, latitude + ', ' + longitude + ', ' + altitude }}" />
 			</ListView.itemTemplate>
 		</ListView>
-        <Label row="6" test="{{ status }}"/>
+        <Label row="5" test="{{ status }}"/>
  	</GridLayout>
 </Page>

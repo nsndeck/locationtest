@@ -70,7 +70,7 @@ function buttonStartTap(agrs) {
 	function(e){
 		console.log("Error: " + e.message);
 	}, 
-	{desiredAccuracy: 3, updateDistance: 10, updateTime: 1000 * 60});
+	{desiredAccuracy: 3, updateDistance: 10, updateTime: 1000 * 20}); // should update every 20 sec according to google documentation this is not so sure.
 }
 exports.buttonStartTap = buttonStartTap;
 
@@ -80,30 +80,6 @@ function buttonStopTap(agrs) {
 	}
 }
 exports.buttonStopTap = buttonStopTap;
-
-function exportData(agrs) {
-    // TODO create file with the logged locations
-    var documentsPath = fs.knownFolders.temp();
-    var locationsPath = "locations.txt";
-    var normalizedPath = fs.path.normalize(documentsPath + locationsPath);
-
-    var locationsFile = fs.File.fromPath(normalizedPath);
-    var locationsData = "";
-    var i;
-    for(i = 0; i < modal.locations.length; i++) {
-        locationsData += modal.locations.getItem(i).latitude + ", " + modal.locations.getItem(i).longitude + "\r\n";
-    }
-
-    locationsFile.write(locationsData).then(
-        function () {
-            model.status = "Export OK";
-        },
-        function (error) {
-            model.status = error;
-        }
-    );
-}
-exports.exportData = exportData;
 
 function showOnMap(args) {
     var topmost = frame.topmost();
