@@ -91,7 +91,7 @@ function exportData(agrs) {
     var locationsData = "";
     var i;
     for(i = 0; i < modal.locations.length; i++) {
-        locationsData += modal.locations[i].latitude + ", " + modal.locations[i].longitude + "\r\n";
+        locationsData += modal.locations.getItem(i).latitude + ", " + modal.locations.getItem(i).longitude + "\r\n";
     }
 
     locationsFile.write(locationsData).then(
