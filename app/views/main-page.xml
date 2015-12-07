@@ -9,6 +9,6 @@
 				<Label text="{{ $value, latitude + ', ' + longitude + ', ' + altitude }}" />
 			</ListView.itemTemplate>
 		</ListView>
-        <Label row="5" test="{{ status }}"/>
+        <Label row="5" text="{{ status }}"/>
  	</GridLayout>
 </Page>
