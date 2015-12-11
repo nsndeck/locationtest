@@ -45,8 +45,12 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 
+function enableLocationTap(args) {
+	geolocation.enableLocationRequest();
+}
+exports.enableLocationTap = enableLocationTap;
+
 function buttonGetLocationTap(args) {
-	//geolocation.enableLocationRequest();
 	var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
 	then(function(loc) {
 		if (loc) {
