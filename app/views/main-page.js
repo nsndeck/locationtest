@@ -46,7 +46,9 @@ function pageLoaded(args) {
 exports.pageLoaded = pageLoaded;
 
 function enableLocationTap(args) {
-	geolocation.enableLocationRequest();
+    if (!geolocation.isEnabled()) {
+        geolocation.enableLocationRequest();
+    }
 }
 exports.enableLocationTap = enableLocationTap;
 
