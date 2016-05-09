@@ -1,15 +1,17 @@
 <Page loaded="pageLoaded">
-    <GridLayout rows="auto, auto, auto, auto, auto, *, auto">
-        <Button row="0" text="enable Location" tap="enableLocationTap"/>
-		<Button row="1" text="get current location" tap="buttonGetLocationTap"/>
-		<Button row="2" text="start monitoring" tap="buttonStartTap"/>
-		<Button row="3" text="stop monitoring" tap="buttonStopTap"/>
-        <Button row="4" text="Show on GMap" tap="showOnMap"/>
-        <ListView row="5" items="{{ locations }}">
-			<ListView.itemTemplate>
-				<Label text="{{ $value, latitude + ', ' + longitude + ', ' + altitude }}" />
-			</ListView.itemTemplate>
-		</ListView>
-        <Label row="6" text="{{ status }}"/>
- 	</GridLayout>
+    <ScrollView>
+        <GridLayout rows="auto, auto, auto, auto, auto, *, auto">
+            <Button row="0" text="enable Location" tap="enableLocationTap"/>
+            <Button row="1" text="get current location" tap="buttonGetLocationTap"/>
+            <Button row="2" text="start monitoring" tap="buttonStartTap"/>
+            <Button row="3" text="stop monitoring" tap="buttonStopTap"/>
+            <Button row="4" text="Show on GMap" tap="showOnMap"/>
+            <ListView row="5" items="{{ locations }}">
+                <ListView.itemTemplate>
+                    <Label text="{{ $value, latitude + ', ' + longitude + ', ' + altitude }}" />
+                </ListView.itemTemplate>
+            </ListView>
+            <Label row="6" text="{{ status }}"/>
+        </GridLayout>
+    </ScrollView>
 </Page>
