@@ -66,7 +66,7 @@ exports.buttonGetLocationTap = buttonGetLocationTap;
 
 var watchId;
 
-function buttonStartTap(agrs) {
+function buttonStartTap(args) {
 	watchId = geolocation.watchLocation(
 	function (loc) {
 		if (loc) {
@@ -80,7 +80,7 @@ function buttonStartTap(agrs) {
 }
 exports.buttonStartTap = buttonStartTap;
 
-function buttonStopTap(agrs) {
+function buttonStopTap(args) {
 	if (watchId) {
 		geolocation.clearWatch(watchId);
 	}
